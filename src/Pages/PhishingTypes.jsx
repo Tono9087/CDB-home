@@ -17,11 +17,6 @@ import spearPhishingImg from '../assets/img/SpearPhishing.png';
 const PhishingTypes = () => {
     const phishingData = [
         {
-            title: 'PHISHING',
-            image: phishingImg,
-            description: 'Puede ser un ataque enfocado en una persona en específico. El atacante en ocasiones modifica un correo para hablarle directamente a usted, e incluye información que sólo un conocido podría saber.'
-        },
-        {
             title: 'SPEAR PHISHING',
             image: spearPhishingImg,
             description: 'Este tipo de phishing se dirige hacia un grupo o tipo específico de personas, como el administrador de los sistemas de una empresa, se busca un beneficio de datos o dinero de estos lugares.'
