@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import Section from '../components/Section';
 import Button from '../components/Button';
 
-/**
- * Página de Cuestionario - Quiz interactivo sobre ciberseguridad
- * @param {Function} setPage - Función para cambiar de página
- */
 const Cuestionario = ({ setPage }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -127,8 +123,8 @@ const Cuestionario = ({ setPage }) => {
     const percentage = Math.round((score / questions.length) * 100);
     return (
       <main className="main">
-        <Section 
-          id="cuestionario-results" 
+        <Section
+          id="cuestionario-results"
           title="Resultados del Cuestionario"
           className="about"
         >
@@ -162,14 +158,14 @@ const Cuestionario = ({ setPage }) => {
                   <Button onClick={handleRestart} variant="primary">
                     Reintentar
                   </Button>
-                  <Button 
+                  <Button
                     onClick={() => {
                       if (setPage) {
                         setPage('Home');
                       } else {
                         window.location.href = '#hero';
                       }
-                    }} 
+                    }}
                     variant="secondary"
                   >
                     Volver al inicio
@@ -185,8 +181,8 @@ const Cuestionario = ({ setPage }) => {
 
   return (
     <main className="main">
-      <Section 
-        id="cuestionario" 
+      <Section
+        id="cuestionario"
         title="Cuestionario de Ciberseguridad"
         subtitle="Pon a prueba tus conocimientos sobre seguridad digital"
         className="about"
@@ -200,12 +196,12 @@ const Cuestionario = ({ setPage }) => {
                 <span>{Math.round(progress)}%</span>
               </div>
               <div className="progress" style={{ height: '10px' }}>
-                <div 
-                  className="progress-bar bg-primary" 
-                  role="progressbar" 
+                <div
+                  className="progress-bar bg-primary"
+                  role="progressbar"
                   style={{ width: `${progress}%` }}
-                  aria-valuenow={progress} 
-                  aria-valuemin="0" 
+                  aria-valuenow={progress}
+                  aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
               </div>
@@ -220,9 +216,8 @@ const Cuestionario = ({ setPage }) => {
                     <button
                       key={index}
                       type="button"
-                      className={`list-group-item list-group-item-action ${
-                        answers[currentQ.id] === index ? 'active' : ''
-                      }`}
+                      className={`list-group-item list-group-item-action ${answers[currentQ.id] === index ? 'active' : ''
+                        }`}
                       onClick={() => handleAnswer(currentQ.id, index)}
                     >
                       <div className="d-flex align-items-center">
@@ -239,16 +234,16 @@ const Cuestionario = ({ setPage }) => {
 
             {/* Navigation Buttons */}
             <div className="d-flex justify-content-between" data-aos="fade-up" data-aos-delay="200">
-              <Button 
-                onClick={handlePrevious} 
+              <Button
+                onClick={handlePrevious}
                 variant="secondary"
                 disabled={currentQuestion === 0}
               >
                 <i className="bi bi-arrow-left me-2"></i>
                 Anterior
               </Button>
-              <Button 
-                onClick={handleNext} 
+              <Button
+                onClick={handleNext}
                 variant="primary"
                 disabled={answers[currentQ.id] === undefined}
               >

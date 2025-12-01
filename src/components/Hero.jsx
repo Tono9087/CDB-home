@@ -2,17 +2,11 @@ import React from 'react';
 import Button from './Button';
 import cybersecurity2Img from '../assets/img/cybersecurity2.png';
 
-/**
- * Componente Hero - Sección principal de bienvenida
- * @param {Object} props
- * @param {Function} props.onGetStarted - Función a ejecutar al hacer click en "Comenzar"
- */
 const Hero = ({ onGetStarted }) => {
   const handleGetStarted = () => {
     if (onGetStarted) {
       onGetStarted();
     } else {
-      // Scroll suave a la sección about
       const element = document.querySelector('#about');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -34,9 +28,9 @@ const Hero = ({ onGetStarted }) => {
             </div>
           </div>
           <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img 
-              src={cybersecurity2Img} 
-              className="img-fluid animated" 
+            <img
+              src={cybersecurity2Img}
+              className="img-fluid animated"
               alt="Ilustración de ciberseguridad"
               loading="lazy"
             />
