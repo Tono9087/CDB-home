@@ -52,7 +52,7 @@ const Home = () => {
             <div className="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
               <div className="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
                 <h3>
-                  <span>Tu seguridad digital es importante, con un viruss </span>
+                  <span>Tu seguridad digital es importante, con un virus </span>
                   <strong>no todo está perdido.</strong>
                 </h3>
                 <p>
